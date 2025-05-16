@@ -1,0 +1,40 @@
+theme = "main"
+client_id = "5abbbf2eae23460f9566556faa47748b"
+client_port = 8080
+login_redirect_uri = "http://127.0.0.1:8989/login"
+playback_format = """
+{status} {track} • {artists}
+{album}
+{metadata}"""
+tracks_playback_limit = 50
+app_refresh_duration_in_ms = 32
+playback_refresh_duration_in_ms = 0
+page_size_in_rows = 20
+play_icon = "▶"
+pause_icon = "▌▌"
+liked_icon = "♥"
+border_type = "Rounded"
+progress_bar_type = "Rectangle"
+enable_cover_image_cache = true
+default_device = "spotify-player"
+seek_duration_secs = 5
+cover_img_width = 10
+cover_img_length = 23
+cover_img_scale = 1.0
+
+[layout]
+playback_window_position = "Bottom"
+playback_window_height = 5
+
+[layout.library]
+playlist_percent = 40
+album_percent = 40
+
+[device]
+name = "luminex"
+device_type = "computer"
+volume = 80
+bitrate = 320
+audio_cache = true
+normalization = true
+autoplay = true

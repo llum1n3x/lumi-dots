@@ -1,0 +1,268 @@
+@import "colors-waybar.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: Maple Mono NF;
+  font-size: 18px;
+  min-height: 10px;
+  background: transparent;
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+  background-color: #777777;
+}
+
+#network:hover {
+  background-color: #777777;
+}
+
+#language:hover {
+  background-color: #777777;
+}
+
+#custom-power:hover {
+  background-color: #777777;
+}
+
+#cpu:hover {
+  background-color: #777777;
+}
+
+#memory:hover {
+  background-color: #777777;
+}
+
+#custom-launcher {
+	/*background: rgb(235, 235, 235);*/
+  background: @foreground;
+	font-size: 25px;
+    margin-top: 5px;
+    margin-left: 17px;
+    padding-left: 10px;
+    padding-right: 5px;
+    border-radius: 10px;
+    transition: none;
+    /*color: rgba(20, 27, 31, 0.8);
+     */
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/*#custom-power {*/
+	/*background: rgb(235, 235, 235);*/
+  /*background: @foreground;
+	font-size: 20px;
+    margin-top: 5px;
+    margin-right: 17px;
+    padding-left: 11px;
+    padding-right: 19px;
+    border-radius: 3px;
+    transition: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+*/
+
+#workspaces {
+  background: rgba(0, 0, 0, 0.55);
+  /*background: rgba(20, 27, 31, 0.8);
+   */
+  margin-top: 5px;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  padding: 1px;
+  border-bottom: 4px;
+  border-style: solid;
+  /*border-color: rgb(235, 235, 235);*/
+  border-color: @foreground;
+}
+
+#workspaces button {
+  padding: 0 10px;
+  padding-left: 8px;
+  font-size: 25px;
+  background-color: transparent;
+  /*color: #b4c7d1;*/
+  color: @foreground;
+}
+
+
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.active{
+ /* color: #141b1f;*/
+  background: transparent;
+  color: @foreground;
+  /*
+  border-radius: 3px;
+  */
+/*box-shadow: inset 0px -2px #ffffff;*/
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+  border-radius: 5px;
+}
+
+#mode {
+  background-color: #64727D;
+  box-shadow: inset 4 -3px #ffffff;
+}
+
+#cava,
+#pulseaudio,
+#network,
+#temperature,
+#language,
+#battery {
+ /* color: #b4c7d1;
+  background: rgba(20, 27, 31, 0.8); */
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  color: #b4c7d1;
+  border-bottom: 4px;
+  border-style: solid;
+  border-color: @foreground;
+  font-size: 17px;
+  color: @foreground;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+#memory,
+#cpu,
+#custom-spotify_player {
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  color: #b4c7d1;
+  border-bottom: 4px;
+  border-style: solid;
+  border-color: @foreground;
+  font-size: 17px;
+  color: @foreground;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+#clock {
+  margin-top: 5px;
+  /* margin-left: 0px; */
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  /* margin-right: 0px; */
+  border-radius: 10px;
+  transition: none;
+  border-bottom: 4px;
+  border-style: solid;
+  border-color: @foreground;
+  font-size: 17px;
+  color: @foreground;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+#custom-power {
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 15px;
+  margin-right: 17px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  color: #b4c7d1;
+  border-bottom: 4px;
+  border-style: solid;
+  border-color: @foreground;
+  font-size: 18px;
+  color: @foreground;
+  background: rgba(0, 0, 0, 0.55);
+}
+#battery.charging,
+#battery.plugged {
+ /* color: #b4c7d1;
+  background: rgba(20, 27, 31, 0.8); */
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  color: #b4c7d1;
+  border-bottom: 4px;
+  border-style: solid;
+  border-color: @foreground;
+  font-size: 17px;
+  color: @foreground;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+
+.modules-right,
+.modules-left,
+.modules-center {
+}
+
+.modules-right {
+}
+
+.modules-left {
+}
+
+.modules-center {
+}
+
+
+
+@keyframes blink {
+  to {
+    color: #000000;
+  }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.8s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#pulseaudio.muted {
+  color: @text;
+}
