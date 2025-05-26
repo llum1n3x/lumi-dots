@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 STATE_FILE=~/.touchpad_state
 DEVICE="elan1200:00-04f3:309f-touchpad"

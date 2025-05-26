@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 while true; do
   title=$(playerctl -p spotify_player metadata title | sed 's/&/&amp;/g')
   artist=$(playerctl -p spotify_player metadata artist | sed 's/&/&amp;/g')
@@ -12,9 +12,7 @@ while true; do
   elif [ "$player_status" = "Playing" ]; then
     echo "▶ $title - $artist"
   elif [ "$player_status" = "Paused" ]; then
-    # echo " $(playerctl -p spotify_player metadata title) - $(playerctl -p spotify_player metadata artist)"
     echo "Ⅱ $title - $artist"
-    # echo "Ⅱ $(playerctl -p spotify_player metadata title) - $(playerctl -p spotify_player metadata artist)"
   else
     echo "No player >:3"
   fi
